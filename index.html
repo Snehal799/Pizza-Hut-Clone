@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Hut</title>
+    <link rel="shortcut icon" href="https://tl.vhv.rs/dpng/s/34-348563_pizza-hut-roof-logo-hd-png-download.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <script src="option.js" defer></script>
+    <script src="logic.js" defer></script>
+</head>
+<body>
+    <div class="Title flex justify-content align-items">
+        <img src="https://ricelakechamber.org/wp-content/uploads/2019/06/Pizza-Hut-Logo-1024x314.jpg" alt="">
+        <div class="Title-side flex ">
+           <span> <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></button>
+           </span>
+           <span> <p>Ordering for Collection from Delhi - D Mall Rohini</p></span>
+           <span>
+            <div class=" clock flex justify-content align-items">
+            <button class="align-items"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-4"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </button>
+                <span>ASAP</span>
+                <button class="cart align-items" onclick="toggleHide()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar flex">
+       <div class="navbarbtn flex">
+       <button id="deals" onclick="showDeals()"> <a href="#">Deals</a></button>
+       <button id="pizzas" onclick="showPizzas()"> <a href="#">Pizzas</a></button>
+       <button id="melts" onclick="showMelts()"> <a href="#">Melts</a></button>
+       <button id="sides" onclick="showSides()"> <a href="#">Sides</a></button>
+       <button id="pastas" onclick="showPastas()"> <a href="#">Pastas</a></button>
+       <button id="desserts" onclick="showDesserts()"> <a href="#">Desserts</a></button>
+       <button id="drinks" onclick="showDrinks()"> <a href="#">Drinks</a></button>
+    </div>
+</nav> 
+    <div class="sideBox">
+        <p>Your Basket</p>
+        <div class="cartItem">
+
+        </div>
+        <div class="subTotal flex">
+         <label for="total">Subtotal Rs.</label>
+         <input id="total" type="number" placeholder="No item is Cart" readonly required> 
+        </div>
+        <div class="pay">
+            <button class="payment">Checkout</button>
+        </div>
+    </div>
+
+
+    <div class="coupon flex">
+    <div class="cCard">
+     <img src="assets/pizza-hut-coupon-codes.jpg" alt="">
+     <div class="text-container">      
+        <h4>25% of Upto Rs.300 on order above Rs.600</h4>
+        <p> Valid on Ala carte orders, not applicable on deals</p>
+        <button>Customise your deal</button>
+    </div> 
+    </div>
+    <div class="cCard">
+        <img src="assets/ae31b4a0afc81682271933daabcc5519.jpg" alt="">
+        <div class="text-container">      
+           <h4>Rs. 125 Off on bill value above Rs.500</h4>
+           <p> Valid on Ala carte orders, not applicable on deals</p>
+           <button>Customise your deal</button>
+       </div> 
+       </div>
+       <div class="cCard">
+        <img src="assets/Pizza-Hut-Feat-1for1-6-Apr-2016.jpg" alt="">
+        <div class="text-container">      
+           <h4>Melts 3 Course meal for 2</h4>
+           <p> The perfect "We Time" meal. Choose any 2 Melts flavour & enjoy with 1 Exotica Veggie Garlic Bread & 1 Pepsi PET</p>
+           <button>Customise your deal</button>
+       </div> 
+       </div>
+</div>
+
+
+<div class="menugrid1">
+    <div class="new">
+        <h1>Newly Launched</h1>
+        <div class="line"></div>
+    </div>
+   <div class=" menu flex">
+
+    <div class="card">
+     <img src="assets/margherita.5f4ef870fb437d0f7e82360758641f2b.1.jpg" alt="">
+     <div class="text-container">      
+        <h4>Margherita</h4>
+        <p>292 Kcal/100gm </p>
+         <p>Pizza topped with our herb-infused signature pan sauce and 100% mozzarella cheese. A classic treat for all cheese lovers out there! (PAN Per/Med-293 Kcal/100g |TnC-293 Kcal/100g) </p>
+         <p>Select your size & crust</p>
+        
+         <div class="size-selector">
+            <select class="crustOptions">
+                <option value="139"><h4>Personal Plan</h4></option>
+                <option value="214"><h4>Personal Stuffed Crust Maxx</h4></option>
+                <option value="289"><h4>Medium Plan</h4></option>
+                <option value="388"><h4>Medium Stuffed Crust Maxx</h4></option>
+                <option value="449"><h4>Large Thin n Crispy</h4></option>
+            </select>
+            
+        </div> 
+        <button class="added">Add <h4>Rs 139</h4></button>
+    </div> 
+    </div>
+
+    <div class="card">
+        <img src="assets/schezwan-margherita.7870b99d5a93ff1593d5d5e50aae8806.1.jpg" alt="">
+        <div class="text-container">      
+         <h4>Schezwan Margherita</h4>
+         <p>300 Kcal/100gm</p>
+         <p>Your very own Margherita, now with a spicy twist! Loaded with our signature spicy schezwan sauce & 100% mozzarella cheese.(PAN-300 Kcal/100g |TnC- 310 Kcal/100g) </p>
+         <p>Select your size & crust</p>
+         <div class="size-selector">
+            <select class="crustOptions">
+                <option value="149"><h4>Personal Plan</h4></option>
+                <option value="234"><h4>Personal Stuffed Crust Maxx</h4></option>
+                <option value="299"><h4>Medium Plan</h4></option>
+                <option value="398"><h4>Medium Stuffed Crust Maxx</h4></option>
+                <option value="459"><h4>Large Thin n Crispy</h4></option>
+            </select>
+            
+        </div>  
+        <button class="added">Add <h4>Rs 149</h4></button>
+       </div> 
+       </div>
+
+       <div class="card">
+        <img src="assets/mazedar-makhni-paneer.7d0b4b6efed172e6e089f0c86959b3f3.1.jpg" alt="">
+        <div class="text-container">      
+            <h4>Mazedar Makhni Paneer </h4>
+         <p> 288 Kcal/100gm </p>
+         <p> A treat for all makhni lovers. Spiced paneer, onion, juicy red bell peppers with our new flavourful makhni sauce, topped with 100% mozzarella cheese and buttery spice sprinkle (PAN Per/Med-288 Kcal/100g |TnC-290 Kcal/100g) </p>
+         <p>Select your size & crust</p>
+         <div class="size-selector">
+            <select class="crustOptions">
+                <option value="149"><h4>Personal Plan</h4></option>
+                <option value="234"><h4>Personal Stuffed Crust Maxx</h4></option>
+                <option value="299"><h4>Medium Plan</h4></option>
+                <option value="398"><h4>Medium Stuffed Crust Maxx</h4></option>
+                <option value="459"><h4>Large Thin n Crispy</h4></option>
+            </select>
+            
+        </div>   
+        <button class="added">Add <h4>Rs 149</h4></button>
+       </div> 
+       </div>
+
+       <div class="card">
+        <img src="assets/tandoori-paneer.345b2b76013be77de027ba09aff9abe6.1.jpg" alt="">
+        <div class="text-container">      
+            <h4>Tandoori Paneer</h4>
+         <p> 335 Kcal/100gm </p>
+         <p> It's our signature. Spiced Paneer, Crunchy Onions & Green Capsicum, spicy Red Paprika with delicious Tandoori Sauce and 100% mozzarella cheese!</p>
+         <p>Select your size & crust</p>
+         <div class="size-selector">
+            <select class="crustOptions">
+                <option value="149"><h4>Personal Plan</h4></option>
+                <option value="234"><h4>Personal Stuffed Crust Maxx</h4></option>
+                <option value="299"><h4>Medium Plan</h4></option>
+                <option value="398"><h4>Medium Stuffed Crust Maxx</h4></option>
+                <option value="459"><h4>Large Thin n Crispy</h4></option>
+            </select>
+            
+        </div>   
+        <button class="added">Add <h4>Rs 149</h4></button>
+       </div> 
+       </div>
+
+       <div class="card">
+        <img src="assets/chicken-supreme.3900c75188542b31fd1a273d2a2dff62.1.jpg" alt="">
+        <div class="text-container">      
+            <h4>Chicken Supreme</h4>
+         <p> 273 Kcal/100gm </p>
+         <p> Loaded with delicious Chicken Tikka, flavourful Herbed Chicken, spicy Schezwan Chicken Meatball with flavourful pan sauce and 100% mozzarella cheese. </p>
+         <p>Select your size & crust</p>
+         <div class="size-selector">
+            <select class="crustOptions">
+                <option value="409"><h4>Personal Plan</h4></option>
+                <option value="484"><h4>Personal Stuffed Crust Maxx</h4></option>
+                <option value="689"><h4>Medium Plan</h4></option>
+                <option value="788"><h4>Medium Stuffed Crust Maxx</h4></option>
+                <option value="875"><h4>Large Thin n Crispy</h4></option>
+            </select>
+            
+        </div>   
+        <button class="added">Add <h4>Rs 409</h4></button>
+       </div> 
+       </div>
+    </div>
+    <div class="new">
+        <h1>Classic</h1>
+        <div class="line"></div>
+    </div>
+</div>
+<div class="menugrid2">
+    <div class=" menu flex">
+        <div class="card">
+         <img src="assets/loaded-veggie-bbq-single.df6b3135f20dc413ff9220e275dc1350.1.jpg" alt="">
+         <div class="text-container">      
+            <h4>Loaded Veggie BBQ</h4>
+            <p> 255 Kcal/100g </p>
+            <p> Thin & Crispy crust, loaded with Crunchy Onion, Green Capsicum, Red Bell Pepper, Juicy Corn, Mushroom, 100% mozzarella cheese, flavorful sauce, and a generous drizzle of signature barbeque sauce, folded over and baked, then brushed with herbed butter and sprinkled with our signature spice seasoning (255 Kcal/100g)
+           </p>
+           <button class="added">Add <h4>Rs 169</h4></button>
+        </div> 
+        </div>
+        <div class="card">
+            <img src="assets/cheesy-cheese-popcorn-single.a4cdb49c5af1269cb0a9d49477d8b527.1.jpg" alt="">
+            <div class="text-container">      
+             <h4>Cheezy Cheese Veg </h4>
+             <p>296 Kcal/100g </p> 
+           <p>Thin & Crispy crust, loaded with Crunchy Onion, Green Capsicum, Red Bell Pepper, Juicy Sweet Corn, 100% mozzarella cheese, flavorful sauce folded over and baked then brushed with herbed butter and sprinkled with cheezy seasoning (296 Kcal/100g)</p>
+           <button class="added">Add <h4>Rs 189</h4></button>
+           </div> 
+           </div>
+           <div class="card">
+            <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/side/magical-makhni-paneer-single.ad33f8c8b5ba1e8c9b1527d07a0b4b50.1.jpg?width=375" alt="">
+            <div class="text-container">      
+            <h4>Magical Makhni Paneer </h4>
+             <p>265 Kcal/100g </p>
+             <p> Thin & Crispy crust, loaded with Spiced paneer, crunchy onion, green capsicum, 100% mozzarella cheese, flavorful sauce your favourite delicious Makhni sauce folded over and baked, then brushed with herbed butter and sprinkled with a flavor packed Makhni seasoning (266 Kcal/100g)</p>
+            <button class="added">Add <h4>Rs 269</h4></button>
+           </div> 
+           </div>
+           <div class="card">
+            <img src="assets/loaded-chicken-bbq-single.0ece35f3b724a358bdc21fe298bd8969.1.jpg" alt="">
+            <div class="text-container">      
+                <h4>Loaded Chicken BBQ </h4>
+             <p> 330 Kcal/100g </p>
+             <p>Thin & Crispy crust, loaded with Juicy Chicken Sausage, Herbed Chicken, 100% mozzarella cheese, flavorful sauce and a generous drizzle of signature barbeque sauce, folded over and baked, then brushed with herbed butter and sprinkled with our signature spice seasoning (330 Kcal/100g) </p>
+             <button class="added">Add <h4>Rs 219</h4></button>
+           </div> 
+           </div>
+           <div class="card">
+            <img src="assets/cheesy-cheese-popcorn-chicken-single.13843c6803c0e79017f8d9f2b666b35c.1.jpg" alt="">
+            <div class="text-container">      
+                <h4>Cheezy Cheese Chicken</h4>
+             <p>268 Kcal/100g</p>
+             <p>Thin & Crispy crust, loaded with juicy Chicken Sausage, Crunchy Onion , Green Capsicum, Red Bell Pepper, 100% mozzarella cheese, flavorful sauce, folded over and baked then brushed with herbed butter and sprinkled with cheezy seasoning (268 Kcal/100g)</p> 
+             <button class="added">Add <h4>Rs 239</h4></button>
+           </div> 
+           </div>
+        </div>
+</div>
+
+<div class="menugrid3">
+    <div class=" menu flex">
+        <div class="card">
+         <img src="assets/cheesy-popcorn-sprinkled-fries-single.c4c80d0fc77e2951bc7fdf13e01b811b.1.jpg" alt="">
+         <div class="text-container">      
+            <h4>Cheezy Sprinkled Fries</h4>
+            <p> 213 Kcal/100g </p>
+            <p>Baked Fries with Cheezy Seasoning (213 Kcal/100g) </p>
+            <button class="added">Add <h4>Rs 99</h4></button>
+        </div> 
+        </div>
+        <div class="card">
+            <img src="assets/exotica-veggie-garlic-bread-single.df5a2cc02290769e451b50a436a55d03.1.jpg" alt="">
+            <div class="text-container">      
+             <h4>Exotica Veggie Garlic Bread</h4>
+             <p> 449 Kcal/100g </p> 
+           <p> Hut's signature Garlic Bread topped with spiced exotic veggies and cheesy dressing (449 Kcal/100g)</p>
+           <button class="added">Add <h4>Rs 149</h4></button>
+           </div> 
+           </div>
+           <div class="card">
+            <img src="assets/creamy-garlic-bread-stix.56bac02d589517202398a899db7016e8.1.jpg" alt="">
+            <div class="text-container">      
+            <h4>Loaded Breadstix  </h4>
+             <p>320 Kcal/100g </p>
+             <p>Freshly baked bread sticks, topped with cheesy dressing & herbs (320 Kcal/100g) </p>
+             <button class="added">Add <h4>Rs 159</h4></button>
+           </div> 
+           </div>
+           <div class="card">
+            <img src="assets/baked-southern-fiery-chicken-wings-(4-pcs)-single.3b800b4114da221adeaadb87dec86225.1.jpg" alt="">
+            <div class="text-container">      
+                <h4>Baked Southern Fiery Chicken Wings 4pcs</h4>
+             <p>225.5 Kcal/100g</p>
+             <p>Chicken wings baked in a fiery sauce, bursting with traditional southern spices. 4pc </p>
+             <button class="added">Add <h4>Rs 139</h4></button>
+           </div> 
+           </div>
+           <div class="card">
+            <img src="assets/cheesy-dip-single.e13d6dc5dc721a096f4d736db9797d82.1.jpg" alt="">
+            <div class="text-container">      
+                <h4>Jalepeno Pepper Dip </h4>
+             <p>55 Kcal/15g</p>
+             <p>Veg Mayonnaise Dip (55 Kcal/15g)</p>
+             <button class="added">Add <h4>Rs 29</h4></button>
+           </div> 
+           </div>
+        </div>
+</div>
+
+<div class="menugrid4">
+    <div class=" menu flex">
+        <div class="card">
+         <img src="assets/tandoori-paneer-pasta-single.bf77df7996c34466eea68aa2af7e9532.1.jpg" alt="">
+         <div class="text-container">      
+            <h4>Tandoori Paneer Pasta </h4>
+            <p> 231 Kcal/100g </p>
+            <p>Penne pasta baked in your favorite tandoori sauce along with flavorful soft paneer, green capsicum, onion and red capsicum (231 Kcal/100g) </p>
+            <button class="added flex">Add <h4>Rs 169</h4></button>
+        </div> 
+        </div>
+        <div class="card">
+            <img src="assets/spicy-schezwan-pasta-single.5d5d087af7c6a71e8ad30086551873a1.1.jpg" alt="">
+            <div class="text-container">      
+             <h4>Spicy Red Schezwan Pasta</h4>
+             <p> 190 Kcal/100g </p> 
+           <p>Fusilli pasta baked in Spicy Schezwan sauce, along with green capsicum, onion, red capsicum and paprika for an added zing (190 Kcal/100g)</p>
+           <button class="added flex ">Add <h4>Rs 179</h4></button>
+           </div> 
+           </div>
+           <div class="card">
+            <img src="assets/penne-mac-n-cheese-pasta-single.b6972bdb6ee3fcf083a6602c94e099e7.1.jpg" alt="">
+            <div class="text-container">      
+            <h4>Penne McN Cheese Pasta </h4>
+             <p>227 Kcal/100g</p>
+             <p>Penne Pasta baked in flavorful sauce along with green capsicum, onion and red capsicum topped with 100% mozzarella cheese (227 Kcal/100g) </p>
+             <button class="added">Add <h4>Rs 209</h4></button>
+           </div> 
+           </div>
+           <div class="card">
+            <img src="assets/spicy-schezwan-chicken-pasta-single.28dd444fea7ebe79aed93a0a217b1742.1.jpg" alt="">
+            <div class="text-container">      
+                <h4>Spicy Red Schezwan Chicken Pasta</h4>
+             <p> 178 Kcal/100g</p>
+             <p>Fusilli pasta baked in spicy Schezwan sauce along with Schezwan chicken Meatballs, green capsicum, onion, red capsicum and Red Paprika (178 Kcal/100g) </p>
+             <button class="added">Add <h4>Rs 199</h4></button>
+           </div> 
+           </div>
+        </div>
+</div>
+
+<div class="menugrid5">
+    <div class=" menu flex">
+        <div class="card">
+         <img src="assets/brow-wow-nie-single.af07c0805f1b335d9a66c9f906c355ec.1.jpg" alt="">
+         <div class="text-container">      
+            <h4>Brow-wow-nie </h4>
+            <p> 273 Kcal/55g </p>
+            <p>A divine choco brownie for your all time chocolate cravings (273 Kcal/55g)</p>
+            <button class="added">Add <h4>Rs 99</h4></button>
+        </div> 
+        </div>
+           <div class="card">
+            <img src="assets/choco-volcano-single.082a06da74a93656298b844bc12db7ce.1.jpg" alt="">
+            <div class="text-container">      
+            <h4>Choco Volcano </h4>
+             <p>262 Kcal/82g</p>
+             <p>Warm choco cake with gooey center (262 Kcal/82g) </p>
+             <button class="added">Add <h4>Rs 119</h4> </button>
+           </div> 
+           </div>
+        </div>
+</div>
+
+
+<div class="menugrid6">
+    <div class=" menu flex">
+        <div class="card">
+         <img src="assets/pepsi-600ml.617b20322a3d644403a0f75b000025ec.1.jpg" alt="">
+         <div class="text-container">      
+            <h4>Pepsi - 475ml  </h4>
+            <p> 108 Kcal/250ml</p>
+            <p>Pepsi PET - 475ml. Contains Caffeine (43 Kcal/100ml)</p>
+            <button class="added">Add <h4>Rs 57</h4></button>
+        </div> 
+        </div>
+           <div class="card">
+            <img src="assets/7-up-600ml.714eedcf98afef8d745265a361ab5577.1.jpg" alt="">
+            <div class="text-container">      
+            <h4>7UP - 475ml  </h4>
+             <p>115 Kcal/250ml</p>
+             <p>7UP PET - 475ml Contains Caffeine (46 Kcal/100ml) </p>
+             <button class="added">Add <h4>Rs 57</h4></button>
+           </div> 
+           </div>
+        </div>
+</div>
+
+<div class="checkout-box" id="checkoutBox">
+  <div class="checkout-content">
+    <h2>Confirm Your Order</h2>
+    <p>Are you sure you want to place this order?</p>
+    <div class="checkout-buttons">
+      <button id="confirmCheckout">Yes, Place Order</button>
+      <button id="cancelCheckout">Cancel</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
